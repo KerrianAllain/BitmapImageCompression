@@ -1,27 +1,34 @@
-# ASD3 Project - ALLAIN Kerrian & ALLAIN Ethann
+# Projet d'Algorithmique et Structures de Données
 
-## Non Interactive Mode
+Réalisé par Kerrian et Ethann ALLAIN
 
-```shell
-java -classpath AllainAllain/bin Main {imagePath} {CompressionMethod} {parameter}
-```
+# Description
 
-`CompressionMethod` is either `Lambda` or `Phi`
+Le projet est réalisé en Java 1.8, et s'utilise via le répertoire parent au projet.
 
-## Interactive Mode
+La compilation du projet s'effectue avec la commande suivante :
 
 ```shell
-java -classpath AllainAllain/bin Main
+javac -source 1.8 -target 1.8 -d BitmapImageGenerator/bin BitmapImageGenerator/src/*.java
 ```
 
-The image to work with will be asked to begin the operations \
-Then the operations using a RQuadtree or an AVL can be typed in the terminal \
-`avlAction` is either `search`, `add` or `delete`
+Deux modes de lancement du projet sont disponibles :
 
-## Generated Images & Texts
+- Le mode non-intéractif qui nécessite de renseigner les arguments nécessaires dans la commande d'exécution.
+- Le mode intéractif qui demande pour commencer l'image à traiter, puis les actions à effectuer sur l'image.
 
-For the Non Interactive Mode and the Interactive Mode the generated images and textuals representations are saved in the Target directory in a directory corresponding to the image and operation done
+Les modes de compression proposés sont `Lambda` et `Phi`.
 
-## Compare two images
+Les images générées sont automatiquement sauvegardées dans le répertoire `BitmapImageGenerator/target/`.
 
-To compare two images you must use the Interactive Mode and use the command compare and enter the files names
+## Mode non-intéractif
+
+```shell
+java -classpath BitmapImageGenerator/bin Main <imagePath> <compressionMethod> <parameter>
+```
+
+## Mode intéractif
+
+```shell
+java -classpath BitmapImageGenerator/bin Main
+```
